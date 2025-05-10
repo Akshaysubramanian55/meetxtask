@@ -21,8 +21,8 @@ A RESTful API for managing activity bookings built with Node.js, Express, and Mo
 
 ### Authentication
 
-- `POST //register` - Register a new user
-- `POST //login` - Login user and get token
+- `POST /register` - Register a new user
+- `POST /login` - Login user and get token
 
 ### Activities
 

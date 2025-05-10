@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "0f8b60ed-216a-4f10-b240-779441484ea4",
+		"name": "meetxcollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36579372"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Akshay Subramanian\",\r\n  \"email\": \"akshay@gmail.com\",\r\n  \"phonenumber\": \"9876543210\",\r\n  \"password\": \"Mypassword123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Akshay Subramanian\",\r\n  \"email\": \"akshay@gmail.com\",\r\n  \"phonenumber\": \"9876543210\",\r\n  \"password\": \"Mypassword123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-18OjcpUEMiVZVBGsWtptK5Nkn4g\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 May 2025 09:17:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Registration successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"email\": \"akshay@gmail.com\",\r\n  \r\n  \"password\": \"Mypassword123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n  \"email\": \"akshay@gmail.com\",\r\n  \r\n  \"password\": \"Mypassword123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "218"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"da-Q1XOeO4KAemqLiLv7Bc46dZ3Hlc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 May 2025 09:25:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZjE5YTMxNTM1YTkxNTM3MmIwYWJhIiwiaWF0IjoxNzQ2ODY5MTA5LCJleHAiOjE3NDY5NTU1MDl9.6lVdHKymcODXS7UW2DKJiltG_APW1BFnqfB02pbKHZU\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add activity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Team Meeting\",\r\n  \"description\": \"Weekly sync-up with the team to discuss project updates.\",\r\n  \"location\": \"Conference Room A\",\r\n  \"dateTime\": \"2025-05-12T10:30:00Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/registeractivities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registeractivities"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Team Meeting\",\r\n  \"description\": \"Weekly sync-up with the team to discuss project updates.\",\r\n  \"location\": \"Conference Room A\",\r\n  \"dateTime\": \"2025-05-12T10:30:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/registeractivities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"registeractivities"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "246"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f6-inQVrurQAb2KMO/0qPdYp+5RuTI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 May 2025 09:27:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Team Meeting\",\n    \"description\": \"Weekly sync-up with the team to discuss project updates.\",\n    \"location\": \"Conference Room A\",\n    \"dateTime\": \"2025-05-12T10:30:00.000Z\",\n    \"_id\": \"681f1bf1ead7b1ac66bc97e4\",\n    \"createdAt\": \"2025-05-10T09:27:13.335Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "get activities",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/getactivites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getactivites"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/getactivites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getactivites"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "691"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b3-MZ0c7A7mmL5HsAypVYkyrftTLgg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 May 2025 09:28:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"681f1bf1ead7b1ac66bc97e4\",\n        \"title\": \"Team Meeting\",\n        \"description\": \"Weekly sync-up with the team to discuss project updates.\",\n        \"location\": \"Conference Room A\",\n        \"dateTime\": \"2025-05-12T10:30:00.000Z\",\n        \"createdAt\": \"2025-05-10T09:27:13.335Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"681e54579adbe04191ad0744\",\n        \"title\": \"Beach Cleanup\",\n        \"description\": \"Community beach cleaning activity.\",\n        \"location\": \"Marina Beach\",\n        \"dateTime\": \"2025-08-20T00:00:00.000Z\",\n        \"createdAt\": \"2025-05-09T19:15:35.916Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"681e54e77af2eb35c5142f81\",\n        \"title\": \"House Cleanup\",\n        \"description\": \"Community Houses cleaning activity.\",\n        \"location\": \"Marina House\",\n        \"dateTime\": \"2025-08-20T00:00:00.000Z\",\n        \"createdAt\": \"2025-05-09T19:17:59.410Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get individual activity",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/getactivity/681f1bf1ead7b1ac66bc97e4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getactivity",
+						"681f1bf1ead7b1ac66bc97e4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/getactivity/681f1bf1ead7b1ac66bc97e4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getactivity",
+								"681f1bf1ead7b1ac66bc97e4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "246"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f6-XRYFeQki1lJHOzsWH1JwLrrFRxg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 May 2025 09:30:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"681f1bf1ead7b1ac66bc97e4\",\n    \"title\": \"Team Meeting\",\n    \"description\": \"Weekly sync-up with the team to discuss project updates.\",\n    \"location\": \"Conference Room A\",\n    \"dateTime\": \"2025-05-12T10:30:00.000Z\",\n    \"createdAt\": \"2025-05-10T09:27:13.335Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "bookings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"activityId\": \"681f1bf1ead7b1ac66bc97e4\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookactivity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookactivity"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "375"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"177-zfjPfnrcTDbyTwDsJIsEknuclc4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 May 2025 09:31:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"681f1d03ead7b1ac66bc97ea\",\n    \"activity\": {\n        \"_id\": \"681f1bf1ead7b1ac66bc97e4\",\n        \"title\": \"Team Meeting\",\n        \"description\": \"Weekly sync-up with the team to discuss project updates.\",\n        \"location\": \"Conference Room A\",\n        \"dateTime\": \"2025-05-12T10:30:00.000Z\",\n        \"createdAt\": \"2025-05-10T09:27:13.335Z\",\n        \"__v\": 0\n    },\n    \"user\": \"681e4ce1a5e428aa8d4f2426\",\n    \"bookingDate\": \"2025-05-10T09:31:47.498Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "mybookings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/mybookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mybookings"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxZTRjZTFhNWU0MjhhYThkNGYyNDI2IiwiaWF0IjoxNzQ2ODE2ODc1LCJleHAiOjE3NDY5MDMyNzV9.u2QTw2GXvmDM7lA6BXjyL7_PlZbeWEbyx6j5R6gN93E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/mybookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"mybookings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "727"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d7-2dw1bAjeezbeMKN82IHCBrv/zOc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 May 2025 09:32:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"681e5837e394592333911c3e\",\n        \"activity\": {\n            \"_id\": \"681e54579adbe04191ad0744\",\n            \"title\": \"Beach Cleanup\",\n            \"description\": \"Community beach cleaning activity.\",\n            \"location\": \"Marina Beach\",\n            \"dateTime\": \"2025-08-20T00:00:00.000Z\",\n            \"createdAt\": \"2025-05-09T19:15:35.916Z\",\n            \"__v\": 0\n        },\n        \"user\": \"681e4ce1a5e428aa8d4f2426\",\n        \"bookingDate\": \"2025-05-09T19:32:07.689Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"681f1d03ead7b1ac66bc97ea\",\n        \"activity\": {\n            \"_id\": \"681f1bf1ead7b1ac66bc97e4\",\n            \"title\": \"Team Meeting\",\n            \"description\": \"Weekly sync-up with the team to discuss project updates.\",\n            \"location\": \"Conference Room A\",\n            \"dateTime\": \"2025-05-12T10:30:00.000Z\",\n            \"createdAt\": \"2025-05-10T09:27:13.335Z\",\n            \"__v\": 0\n        },\n        \"user\": \"681e4ce1a5e428aa8d4f2426\",\n        \"bookingDate\": \"2025-05-10T09:31:47.498Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
